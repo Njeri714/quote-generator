@@ -1,11 +1,11 @@
 <div id="nav">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-              <img src="/Screenshot from 2022-01-07 08-35-13.png" alt="" srcset="">
-          </a>
+            <a class="navbar-brand" href="#">
+                <img src="/Screenshot from 2022-01-07 08-35-13.png" alt="" srcset="">
+            </a>
         </div>
-      </nav>
+    </nav>
 </div>
 
 <h1 class="text-primary" id="please">Plase Input Your quote to Generate It</h1>
@@ -15,19 +15,20 @@
 
 <br>
 
-<form (ngSubmit)="onSubmit()" #form='ngbody'>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
     <div class="form-group">
         <label for="name">Author</label>
         <input type="text" class="form-control" name="name" ngModel required #username="ngModel">
-        <span class="text-danger"*ngIf="username.touched  && username.invalid">Please input your name *</span>
+        <span class="text-danger" *ngIf="username.touched  && username.invalid">Please input your name *</span>
     </div>
     <br>
     <div class="form-group">
         <label for="email">Email</label>
         <input type="email" class="form-control" name="email" ngModel required email #userEmail="ngModel" email>
-        <span class="text-danger" *ngIf="userEmail.touched  && userEmail.invalid">Please input your correct email *</span>
+        <span class="text-danger" *ngIf="userEmail.touched  && userEmail.invalid">Please input your correct email
+            *</span>
     </div>
-     <br>
+    <br>
     <div class="form-group">
         <label for="quote">Write your Quote</label>
         <input type="text" class="form-control" name="quote" ngModel required #quote="ngModel">
@@ -35,7 +36,8 @@
     </div>
     <br>
 
-    <button type="submit" class="btn-1 btn-primary mt-2" [disabled]="form.invalid" (click)="onAddData(username, userEmail, quote )">Submit</button>
+    <button type="submit" class="btn-1 btn-primary mt-2" [disabled]="form.invalid"
+        (click)="onAddData(username, userEmail, quote )">Submit</button>
 </form>
 <div class="container">
     <div class="row">
@@ -43,11 +45,12 @@
             <li>{{quote.name}}</li>
             <li>{{quote.email}}</li>
             <li>{{quote.quote}}</li>
-            <strong (click)="addUpvote(t)"><button class="btn btn-primary">upvote</button></strong><strong> {{quote.upvote}}</strong> 
-            || <strong (click)="removeUpvote(t)" >
+            <strong (click)="addUpvote(t)"><button class="btn btn-primary">upvote</button></strong><strong>
+                {{quote.upvote}}</strong>
+            || <strong (click)="removeUpvote(t)">
                 <button class="btn btn-secondary">downvote</button></strong><strong> {{quote.downvote}}</strong> <br>
-            <button type="button" class="btn btn-outline-danger mt-2" (click)="onDeleteQuote(t)">Delete Quote</button>
-        <hr>
+            <button type="button" class="btn btn-outline-danger mt-2" (click)="onEraseQuote(t)">Erase Quote</button>
+            <hr>
         </div>
     </div>
 </div>
@@ -55,15 +58,16 @@
     <div class="form-group">
         <label for="name">Author</label>
         <input type="text" class="form-control" name="name" ngModel required #username="ngModel">
-        <span class="text-danger"*ngIf="username.touched  && username.invalid">Please input your name *</span>
+        <span class="text-danger" *ngIf="username.touched  && username.invalid">Please input your name *</span>
     </div>
     <br>
     <div class="form-group">
         <label for="email">Email</label>
         <input type="email" class="form-control" name="email" ngModel required email #userEmail="ngModel" email>
-        <span class="text-danger" *ngIf="userEmail.touched  && userEmail.invalid">Please input your correct email *</span>
+        <span class="text-danger" *ngIf="userEmail.touched  && userEmail.invalid">Please input your correct email
+            *</span>
     </div>
-     <br>
+    <br>
     <div class="form-group">
         <label for="quote">Write your Quote</label>
         <input type="text" class="form-control" name="quote" ngModel required #quote="ngModel">
@@ -71,7 +75,8 @@
     </div>
     <br>
 
-    <button type="submit" class="btn-1 btn-primary mt-2" [disabled]="form.invalid" (click)="onAddData(username, userEmail, quote )">Submit</button>
+    <button type="submit" class="btn-1 btn-primary mt-2" [disabled]="form.invalid"
+        (click)="onAddData(username, userEmail, quote )">Submit</button>
 </form>
 <div class="container">
     <div class="row">
@@ -79,11 +84,12 @@
             <li>{{quote.name}}</li>
             <li>{{quote.email}}</li>
             <li>{{quote.quote}}</li>
-            <strong (click)="addUpvote(t)"><button class="btn btn-primary">upvote</button></strong><strong> {{quote.upvote}}</strong> 
-            || <strong (click)="removeUpvote(t)" >
+            <strong (click)="addUpvote(t)"><button class="btn btn-primary">upvote</button></strong><strong>
+                {{quote.upvote}}</strong>
+            || <strong (click)="removeUpvote(t)">
                 <button class="btn btn-secondary">downvote</button></strong><strong> {{quote.downvote}}</strong> <br>
             <button type="button" class="btn btn-outline-danger mt-2" (click)="onEraseQuote(t)">Erase Quote</button>
-        <hr>
+            <hr>
         </div>
     </div>
 </div>
