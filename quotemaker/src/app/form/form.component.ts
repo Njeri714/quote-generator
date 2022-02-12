@@ -14,6 +14,7 @@ export class FormComponent implements OnInit {
   ]
   upvote: number = 0
   downvote: number = 0
+  static QuoteDisplayComponent: any[] | Type<any>;
 
   constructor() { }
 

@@ -1,25 +1,20 @@
-;
-import { QuoteDisplayComponent } from './quote-display/quote-display.component';
-import { FormComponent } from './form/form.component';
-import { HeadComponent } from './head/head.component';
-import { FooterComponent } from './footer/footer.component'import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { CustomerUppercaseDirective } from './customer-uppercase.directives';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { formsComponent } from 
+import { FormComponent } from './form/form.component';
+import {HttpClientModule} from '@angular/common/http';
+import { CustomerUppercaseDirective } from './customer-uppercase.directives';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormsComponent.
+    FormComponent.
     QuoteDisplayComponent,
     CustomerUppercaseDirective,
-    FooterComponent,
-    HeadComponent,
-    FormComponent,
-    QuoteDisplayComponent
   ],
   imports: [
     BrowserModule,
