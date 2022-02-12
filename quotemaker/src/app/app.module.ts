@@ -1,4 +1,6 @@
 ;
+import { QuoteDisplayComponent } from './quote-display/quote-display.component';
+import { FormComponent } from './form/form.component';
 import { HeadComponent } from './head/head.component';
 import { FooterComponent } from './footer/footer.component'import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +17,9 @@ import { formsComponent } from
     QuoteDisplayComponent,
     CustomerUppercaseDirective,
     FooterComponent,
-    HeadComponent
+    HeadComponent,
+    FormComponent,
+    QuoteDisplayComponent
   ],
   imports: [
     BrowserModule,
